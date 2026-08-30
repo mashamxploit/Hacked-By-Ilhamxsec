@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacked By Ilhamn4xsec</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #050505;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Rajdhani', sans-serif;
+            padding: 15px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        /* Efek background gelap bergerak */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, #1a0000 0%, #000000 70%);
+            z-index: 0;
+            animation: bgPulse 15s infinite alternate;
+        }
+        @keyframes bgPulse {
+            0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            100% { transform: scale(1.1) rotate(3deg); opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 0, 0, 0.15);
+            border-radius: 24px;
+            padding: 45px 50px;
+            max-width: 1100px;
+            width: 100%;
+            box-shadow: 0 0 80px rgba(255, 0, 0, 0.05), inset 0 0 80px rgba(255, 0, 0, 0.02);
+            animation: fadeInUp 1.2s ease-out;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(40px) scale(0.96); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Sisi kiri — Teks */
+        .left {
+            flex: 2;
+            min-width: 280px;
+        }
+        .left .badge {
+            display: inline-block;
+            background: #ff000015;
+            border: 1px solid #ff000033;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            color: #ff6666;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .left h1 {
+            font-family: 'Orbitron', monospace;
+            font-weight: 900;
+            font-size: clamp(2.2rem, 7vw, 4.8rem);
+            color: #ffffff;
+            text-shadow: 0 0 30px #ff000055, 0 0 60px #ff000022;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+        .left h1 .red {
+            color: #ff1a1a;
+            text-shadow: 0 0 40px #ff000088, 0 0 80px #ff000044;
+            display: inline-block;
+            animation: glitchText 2.8s infinite;
+        }
+        @keyframes glitchText {
+            0%, 100% { text-shadow: 0 0 30px #ff000066; }
+            50% { text-shadow: 4px 0 #ff0000, -4px 0 #00ff00, 0 0 60px #ff0000aa; }
+        }
+        .left .sub {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            color: #aaa;
+            letter-spacing: 6px;
+            font-weight: 600;
+            border-left: 3px solid #ff0000;
+            padding-left: 18px;
+            margin: 12px 0 20px;
+        }
+        .left .sub span {
+            color: #ff3333;
+        }
+
+        /* Sisi kanan — Logo + Pesan */
+        .right {
+            flex: 1.2;
+            min-width: 220px;
+            text-align: center;
+        }
+        .right .logo-wrap {
+            background: rgba(255, 0, 0, 0.03);
+            border-radius: 50%;
+            padding: 10px;
+            border: 1px solid rgba(255, 0, 0, 0.1);
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: transform 0.4s;
+        }
+        .right .logo-wrap:hover {
+            transform: scale(1.03) rotate(-2deg);
+        }
+        .right .logo-wrap img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #ff000088;
+            box-shadow: 0 0 50px #ff000033;
+            display: block;
+        }
+        .right .tagline {
+            font-size: 1rem;
+            color: #888;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .right .tagline .red {
+            color: #ff3333;
+        }
+
+        /* Pesan panjang — full width di bawah */
+        .message-box {
+            flex: 0 0 100%;
+            margin-top: 15px;
+            padding: 22px 28px;
+            background: rgba(255, 255, 255, 0.015);
+            border-radius: 16px;
+            border-left: 4px solid #ff0000;
+            border-right: 1px solid #222;
+            color: #ccc;
+            font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+            line-height: 1.9rem;
+            position: relative;
+        }
+        .message-box .highlight {
+            color: #ff3333;
+            font-weight: 700;
+        }
+        .message-box .quote {
+            display: block;
+            margin-top: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #333;
+            color: #666;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        /* Audio + footer */
+        .audio-wrap {
+            flex: 0 0 100%;
+            text-align: center;
+            margin: 10px 0 5px;
+        }
+        .audio-wrap audio {
+            width: 100%;
+            max-width: 380px;
+            background: #0a0a0a;
+            border-radius: 40px;
+            filter: invert(0.75);
+            outline: none;
+        }
+        .footer {
+            flex: 0 0 100%;
+            text-align: center;
+            padding-top: 18px;
+            border-top: 1px solid #1a1a1a;
+            font-size: 0.8rem;
+            color: #444;
+            letter-spacing: 2px;
+        }
+        .footer a {
+            color: #ff3333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+        .footer .hashtag {
+            color: #555;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 750px) {
+            .container {
+                padding: 30px 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+            .left .sub {
+                border-left: none;
+                padding-left: 0;
+            }
+            .right .logo-wrap img {
+                width: 100px;
+                height: 100px;
+            }
+            .message-box {
+                padding: 18px 16px;
+                text-align: left;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 12px;
+                border-radius: 16px;
+            }
+            .left h1 {
+                font-size: 2rem;
+            }
+            .right .logo-wrap img {
+                width: 80px;
+                height: 80px;
+            }
+            .message-box {
+                font-size: 0.85rem;
+                line-height: 1.6rem;
+                padding: 14px 12px;
+            }
+            .footer {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- SISI KIRI -->
+        <div class="left">
+            <div class="badge">HACKTIVIST INDONESIA</div>
+            <h1>
+                <span class="red">HACKED</span> BY<br>
+                ILHAMN4XSEC
+            </h1>
+            <div class="sub"><span>GARUDA SECURITY</span> INDONESIA </div>
+        </div>
+
+        <!-- SISI KANAN -->
+        <div class="right">
+            <div class="logo-wrap">
+                <img src="https://l.top4top.io/p_3894rdusg0.png" alt="Garuda Security">
+            </div>
+            <div class="tagline">
+                <span class="red">#</span>HackForGood<br>
+                <span style="font-size:0.8rem;color:#666;">Freedom Fighters</span>
+            </div>
+        </div>
+
+        <!-- PESAN FULL -->
+        <div class="message-box">
+            <span class="highlight">Kami tidak merusak situs ini.</span><br>
+            Kami hanya meminjam layar sebentar.<br><br>
+            Karena terkadang, satu-satunya cara agar didengar adalah<br>
+            dengan berdiri di panggung yang selama ini kau kunci.<br><br>
+            <span class="highlight">Kami bukan musuh negara.</span><br>
+            Kami adalah warganya yang lelah berteriak di kolom komentar.<br><br>
+            <span class="highlight">Perbaiki yang rusak.</span><br>
+            Bukan hanya kode, tapi juga janji.<br>
+            <span class="quote">2026 ILHAMN4XSEC</span>
+        </div>
+
+        <!-- AUDIO -->
+        <div class="audio-wrap">
+            <audio controls autoplay loop>
+                <source src="https://h.top4top.io/m_2901rt5u71.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <span class="hashtag">#TransparansiUntukSemua #StopJudi #FreedomFighters</span><br>
+        </div>
+    </div>
+</body>
+</html>
