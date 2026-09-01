@@ -1,4 +1,4 @@
-##XSS PRESISTENT DEFACEMENT
+## XSS PERSIATEN DEFACEMENT
 
 ## Fitur
 - Cookie persistence
