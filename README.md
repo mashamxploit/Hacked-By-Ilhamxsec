@@ -1,6 +1,5 @@
-# Hacked-By-Ilhamxsec
-# XSS Persistent Defacement
-### Oleh ILHAMN4XSEC
+
+##XSS Persistent Defacement
 
 ## Fitur
 - Cookie persistence
