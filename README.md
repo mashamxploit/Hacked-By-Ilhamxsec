@@ -1,4 +1,4 @@
-## XSS PERSIATEN DEFACEMENT
+## XSS PERSISTENT DEFACEMENT
 
 ## FITUR:
 - Cookie persistence
